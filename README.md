@@ -1,7 +1,9 @@
 # DRL Landing for Bebop 2 under Parrot Sphinx Software
 This is the repository for making autonomous landing on moving platform based on picture from Bebop 2 RGB camera. I used [drl-landing] package and implemented it under **Parrot Sphinx** software and **bebop_autonomy** driver. I also implemented avoiding collision betweeen two drones, where first is the leader and second (avoiding drone) is the follower.
 
-# What you should have if you would like to use it:
+**NOT FINISHED YET**
+
+## What you should have if you would like to use it:
 - **install ROS** (I was working under **ROS Kinetic** on Ubuntu 16.04 LTS) [ROS Kinetic Installation]. It is possible to run it under ROS Melodic on Ubuntu 18.04, but you do it at your own risk.
 - **install Gazebo** (Probably it is install with ROS but check it out)
 - **install Parrot Sphinx software** [Parrot Sphinx install]
@@ -20,20 +22,23 @@ sudo apt-get install ros-kinetic-control-toolbox ros-kinetic-control-msgs
 '''
 - **gym** [gym install]
 
-# What this repository includes and what modifies you have to make to run the project:
+## What this repository includes and what modifies you have to make to run the project:
 This repository includes:
 - **bebop_autonomy_modification** - is the folder, which includes modifications with bebop_autonomy driver. I added two launch files: for leader and follower. You have to paste them to ../your_workspace/src/bebop_autonomy/bebop_driver/launch .
 - **drone_files** -this folder includes leader and follower *.drone files, which Parrot Sphinx use to launch the drone in simulation. You have to paste them to /opt/parrot-sphinx/usr/share/sphinx/drones . If you would like to launch two drones in one simulation, you have to download elder version of firmware. You can get it from [Firmware version]. Download **Bebop 2 - 4.4.2** and in both files change the firmware path to your own. If you are going to run only one drone, copy firmware path from bebop2.drone file.
 - **Plugins** includes plugins to move platform in many ways. Paste them anywhere.
 - **Gazebo_3Dmodels** includes 3D models of platform and room from AeroLab on Poznan University of Technology. Paste them to ~/.gazebo/models.
 - **drl-landing** is modified version of [drl-landing]. You have to paste it to ../your_workspace/src folder. Then compile rl_boost_python:
+
 '''sh
 $ cd ../your_workspace/src/drl-landing/code-rl-environment-gazebo/rl_boost_python
 $ mkdir build && cd build
 $ cmake ..
 $ make
 '''
+
 Next, compile aruco package:
+
 '''sh
 $ cd ../your_workspace/src/drl-landing/code-rl-environment-gazebo/aruco304
 $ mkdir build && cd build
@@ -44,6 +49,7 @@ $ make
 - **bebop_keyboard** -also paste to ../your_workspace/src. It includes keboard control to both drones and their camera
 - **collision_avoid** - paste to ../your_workspace/src.
 Now you can compile all workspace:
+
 '''sh
 $ cd ../your_workspace
 $ catkin build
