@@ -3,7 +3,7 @@ This is the repository for making autonomous landing on moving platform based on
 
 ## Some results of simulation and real test
 In Gazebo simulator it looks like this:
-![alt text](https://imgur.com/a/9Yi0mGh)
+![Simulation Test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/aruco_detection.png)
 
 ## What you should have if you would like to use it:
 - **install ROS** (I was working under **ROS Kinetic** on Ubuntu 16.04 LTS) - [ROS Kinetic Installation]. It is possible to run it under ROS Melodic on Ubuntu 18.04, but you do it at your own risk.
