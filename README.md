@@ -8,7 +8,7 @@ In Gazebo simulator it looks like this:
 
 And this is video from test simulation:
 <a href="https://youtu.be/e1Hn_gFjMF0
-" target="_blank"><img src="https://youtu.be/e1Hn_gFjMF0" 
+" target="_blank"><img src="https://youtu.be/e1Hn_gFjMF0/0.jpg" 
 alt="Simulation test" width="240" height="180" border="10" /></a>
 
 Real test was made with static platform:
