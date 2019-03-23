@@ -6,6 +6,11 @@ In Gazebo simulator it looks like this:
 
 ![Simulation test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/aruco_detection.png)
 
+And this is video from test simulation:
+<a href="https://youtu.be/e1Hn_gFjMF0
+" target="_blank"><img src="https://youtu.be/e1Hn_gFjMF0" 
+alt="Simulation test" width="240" height="180" border="10" /></a>
+
 Real test was made with static platform:
 
 ![Real test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/real_test.png)
