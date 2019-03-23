@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drone
+  name="bebop_leader"
+  firmware="/home/milena/autolanding/firmware/ardrone3-milos_pc.ext2.zip"
+  hardware="milosboard">
+  <machine_params
+    low_gpu="false"
+    with_front_cam="true"
+    with_hd_battery="false"
+    with_flir="false"
+    flir_pos="tilted"/>
+  <pose>default</pose>
+  <interface>eth1</interface>
+  <!-- 'wlan0' may need to be replaced the actual wifi interface name -->
+  <stolen_interface>eth0:eth0:192.168.42.1/24</stolen_interface>
+</drone>
+

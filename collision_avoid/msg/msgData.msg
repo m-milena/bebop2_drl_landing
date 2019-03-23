@@ -1,0 +1,11 @@
+msgCoordinates target_pos
+msgCoordinates actual_pos
+msgCoordinates error_pos
+msgCoordinates velocity_cmd
+float64 max_vel
+float64 min_vel
+float64 error_ctrl_x
+float64 error_ctrl_y
+msgCoordinates Kp
+msgCoordinates Ki
+msgCoordinates Kd

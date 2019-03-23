@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <model name="room">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision_wall 1">
+	<pose> 0.1 -2.7 1.5 0 0 0 </pose>
+        <geometry>
+          <box>
+	    <size>5.25 0.5 3.05 </size>
+	  </box>
+        </geometry>
+      </collision>
+      <collision name = "collision_wall 2">
+        <pose> 0.1 2 1.5 0 0 0</pose>
+        <geometry>
+	  <box>
+	    <size>5.25 0.5 3.05 </size>
+	  </box>
+        </geometry>
+      </collision>
+      <collision name="collision_wall 3">
+        <pose> -2.35 -0.4 1.5 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size> 0.5 5.25 3.05 </size>
+	  </box>
+	</geometry>
+      </collision>
+      <collision name="collision_wall 4">
+	<pose> 2.5 -0.4 1.5 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size> 0.5 5.25 3.05 </size>
+	  </box>
+	</geometry>
+      </collision>
+      <collision name="collision_floor">
+	<pose>0.08 -0.35 0.02 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>5.27 5.2 0.05</size>
+	  </box>
+	</geometry>
+      </collision>
+      <collision name="collision_ceiling">
+	<pose>0.08 -0.35 3.0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>5.27 5.2 0.06</size>
+	  </box>
+	</geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://room/meshes/room.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link> 
+  </model>
+</sdf>

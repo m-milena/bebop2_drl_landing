@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17575/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17575.dir/build.make CMakeFiles/cmTC_17575.dir/build
+make[1]: Wejście do katalogu '/home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17575.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_17575.dir/CheckSymbolExists.c.o   -c /home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_17575
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17575.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_17575.dir/CheckSymbolExists.c.o  -o cmTC_17575 -rdynamic 
+CMakeFiles/cmTC_17575.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_17575.dir/build.make:97: polecenia dla obiektu 'cmTC_17575' nie powiodły się
+make[1]: *** [cmTC_17575] Błąd 1
+make[1]: Opuszczenie katalogu '/home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp'
+Makefile:126: polecenia dla obiektu 'cmTC_17575/fast' nie powiodły się
+make: *** [cmTC_17575/fast] Błąd 2
+
+File /home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_feaf7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_feaf7.dir/build.make CMakeFiles/cmTC_feaf7.dir/build
+make[1]: Wejście do katalogu '/home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_feaf7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_feaf7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_feaf7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_feaf7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_feaf7.dir/CheckFunctionExists.c.o  -o cmTC_feaf7 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_feaf7.dir/build.make:97: polecenia dla obiektu 'cmTC_feaf7' nie powiodły się
+make[1]: *** [cmTC_feaf7] Błąd 1
+make[1]: Opuszczenie katalogu '/home/milena/autolanding/autolanding_high_speed_plugin/build/CMakeFiles/CMakeTmp'
+Makefile:126: polecenia dla obiektu 'cmTC_feaf7/fast' nie powiodły się
+make: *** [cmTC_feaf7/fast] Błąd 2
+
+

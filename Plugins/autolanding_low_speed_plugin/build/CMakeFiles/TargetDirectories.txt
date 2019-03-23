@@ -1,0 +1,3 @@
+/home/milena/autolanding/autolanding_low_speed_plugin/build/CMakeFiles/edit_cache.dir
+/home/milena/autolanding/autolanding_low_speed_plugin/build/CMakeFiles/rebuild_cache.dir
+/home/milena/autolanding/autolanding_low_speed_plugin/build/CMakeFiles/animated_platform.dir

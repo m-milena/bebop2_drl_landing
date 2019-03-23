@@ -1,0 +1,231 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="vision_landing_platform">
+    <static>1</static>
+    <gravity>0</gravity>
+    <link name="sensors_link">
+    <inertial>
+      <mass value="5000"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+    <collision name="box_collision">
+          <geometry>
+            <box>
+              <size>1.2 1.2 0.3</size>
+            </box>
+          </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.99</mu>
+            <mu2>0.99</mu2>
+          </ode>
+        </friction>
+      </surface>
+        </collision>
+
+       <!-- <collision name="landing_collision">
+          <geometry>
+            <box>
+              <size>0.8 0.8 0.3</size>
+            </box>
+          </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.99</mu>
+            <mu2>0.99</mu2>
+          </ode>
+        </friction>
+      </surface>
+        </collision> -->
+
+   	<visual name="visual0">
+          <geometry>
+            <box>
+              <size>0.235 0.235 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco0</name>
+          </script>
+        </material>
+        <pose frame=''>-0.4525 -0.4525 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual1">
+          <geometry>
+            <box>
+              <size>0.235 0.235 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco1</name>
+          </script>
+        </material>
+        <pose frame=''>-0.4525 0.4525 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+	   
+   	<visual name="visual2">
+          <geometry>
+            <box>
+              <size>0.235 0.235 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco2</name>
+          </script>
+        </material>
+        <pose frame=''>0.4525 0.4525 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual3">
+          <geometry>
+            <box>
+              <size>0.235 0.235 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco3</name>
+          </script>
+        </material>
+        <pose frame=''>0.4525 -0.4525 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual4">
+          <geometry>
+            <box>
+              <size>0.235 0.235 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco4</name>
+          </script>
+        </material>
+        <pose frame=''>0 0 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual5">
+          <geometry>
+            <box>
+              <size>0.117 0.117 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco5</name>
+          </script>
+        </material>
+        <pose frame=''>0.2262 0.2262 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual6">
+          <geometry>
+            <box>
+              <size>0.117 0.117 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco6</name>
+          </script>
+        </material>
+        <pose frame=''>0.2262 -0.2262 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual7">
+          <geometry>
+            <box>
+              <size>0.117 0.117 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco7</name>
+          </script>
+        </material>
+        <pose frame=''>-0.2262 -0.2262 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+   	<visual name="visual8">
+          <geometry>
+            <box>
+              <size>0.117 0.117 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://vision_landing_platform/materials/scripts</uri>
+            <uri>model://vision_landing_platform/materials/textures</uri>
+            <name>aruco8</name>
+          </script>
+        </material>
+        <pose frame=''>-0.2262 0.2262 0.15 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.2 1.2 0.295</size>
+            </box>
+          </geometry>
+        <material>
+         <!-- <script>
+            <name>Gazebo/blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script> -->
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0.7 0.7 0.7 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0.0</transparency>
+        </visual>
+    </link>
+      <plugin name="animated_platform" filename="libanimated_platform.so"/>
+  </model>
+</sdf>
