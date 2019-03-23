@@ -7,9 +7,8 @@ In Gazebo simulator it looks like this:
 ![Simulation test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/aruco_detection.png)
 
 And this is video from test simulation:
-<a href="https://youtu.be/e1Hn_gFjMF0
-" target="_blank"><img src="http://img.youtube.com/vi/e1Hn_gFjMF0/0.jpg" 
-alt="Simulation test" width="240" height="180" border="10" /></a>
+
+[![Simulation test](http://img.youtube.com/vi/e1Hn_gFjMF0/0.jpg)](https://youtu.be/e1Hn_gFjMF0)
 
 Real test was made with static platform:
 
