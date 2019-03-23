@@ -6,14 +6,18 @@ In Gazebo simulator it looks like this:
 
 ![Simulation test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/aruco_detection.png)
 
-And this is video from test simulation:
-
-[![Simulation test](http://img.youtube.com/vi/e1Hn_gFjMF0/0.jpg)](https://youtu.be/e1Hn_gFjMF0)
-
 Real test was made with static platform:
 
 ![Real test](https://github.com/m-milena/bebop2_drl_landing/blob/master/Images/real_test.png)
 
+And there are videos from simulation and real test:
+
+<a href="https://youtu.be/e1Hn_gFjMF0
+" target="_blank"><img src="http://img.youtube.com/vi/e1Hn_gFjMF0/0.jpg" 
+alt="Simulation test" width="240" height="180" border="10" /></a>
+<a href="https://youtu.be/Tf4SAZeZxFg
+" target="_blank"><img src="http://img.youtube.com/vi/Tf4SAZeZxFg/0.jpg" 
+alt="Real test" width="240" height="180" border="10" /></a>
 
 ## What you should have if you would like to use it:
 - **install ROS** (I was working under **ROS Kinetic** on Ubuntu 16.04 LTS) - [ROS Kinetic Installation]. It is possible to run it under ROS Melodic on Ubuntu 18.04, but you do it at your own risk.
@@ -54,6 +58,7 @@ $ cd ../your_workspace
 $ catkin build
 ```
 
+## How to run it?
 to be continued
 
 
