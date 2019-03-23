@@ -17,7 +17,7 @@ Now you have to make your own catkin workspace [create workspace] and install:
 - **dronemsgsros** [dronemsgsros repository]
 - **nav_msgs** [nav_msgs install]
 - **control_toolbox and control_msgs**:
-'''sh
+'''console
 sudo apt-get install ros-kinetic-control-toolbox ros-kinetic-control-msgs
 '''
 - **gym** [gym install]
@@ -46,7 +46,7 @@ to be continued
 [drl-landing]:<https://github.com/alejodosr/drl-landing>
 [ROS Kinetic Installation]:<http://wiki.ros.org/kinetic/Installation>
 [Parrot Sphinx install]:<https://developer.parrot.com/docs/sphinx/installation.html>
-[opencv_aruco_install]:<>
+[opencv_aruco_install]:<https://github.com/m-milena/bebop2_drl_landing/tree/master/opencv_aruco_install>
 [create workspace]:<http://wiki.ros.org/catkin/Tutorials/create_a_workspace>
 [bebop_autonomy install]:<https://bebop-autonomy.readthedocs.io/en/latest/installation.html>
 [dronemsgsros install]:<https://github.com/Ahrovan/dronemsgsros>
