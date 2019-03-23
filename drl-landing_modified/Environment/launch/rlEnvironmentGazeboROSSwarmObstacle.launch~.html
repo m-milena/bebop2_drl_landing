@@ -1,0 +1,30 @@
+<!-- Launches: droneAperiodicLandingROSModule -->
+<launch>
+	
+	<arg name="drone_id_namespace"  default="drone7" />
+	<arg name="drone_id_int" 	  		default="7" />
+	<arg name="my_stack_directory" 	default="$(env AEROSTACK_STACK)" />
+	<arg name="environment_name"		default="RlEnvironmentSwarmObstacle" /> <!-- options: RlEnvironmentImageBasedVisualServoing, RlEnvironmentLandingConstant -->
+<!-- options: RlEnvironmentPositionBasedVisualServoing -->
+
+	<group ns="$(arg drone_id_namespace)">
+		<node name="RlEnvironmentGazeboRos" pkg="RlEnvironmentGazeboRos" type="RlEnvironmentGazeboRos" output="screen">
+			<param name="droneId" 					value="$(arg drone_id_int)" type="int"/>
+			<param name="stackPath" 				value="$(arg my_stack_directory)" type="string"/>
+			<param name="environment_name" 	value="$(arg environment_name)" type="string"/>
+
+			<!-- Subscriber -->
+			<param name="model_states" 		type="string" 		value="/gazebo/model_states" />
+
+			<!-- Publisher -->
+			<param name="speed_refs" 		type="string" 		value="droneSpeedsRefs" />
+			<param name="position_refs" 		type="string" 		value="dronePositionRefs" />
+			<param name="obstacle_pos_vel" 		type="string" 		value="/obstacle_pose_and_velocity" />
+
+			<!-- Services -->
+			<param name="set_model_state" 		type="string" 		value="/gazebo/set_model_state" />
+			<param name="reset_estimator" 		type="string" 		value="droneOdometryStateEstimator/reset" />
+		</node>
+	</group>
+
+</launch>

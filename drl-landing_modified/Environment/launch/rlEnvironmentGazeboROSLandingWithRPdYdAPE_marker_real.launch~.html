@@ -1,0 +1,51 @@
+<!-- Launches: droneAperiodicLandingROSModule -->
+<launch>
+	
+	<arg name="drone_id_namespace"  default="drone4" />
+	<arg name="drone_id_int" 	  		default="4" />
+	<arg name="my_stack_directory" 	default="$(env AEROSTACK_STACK)" />
+	<arg name="environment_name"		default="RlEnvironmentLandingWithRPdYdAPEMarker" /> 
+
+	<group ns="$(arg drone_id_namespace)">
+		<node name="RlEnvironmentGazeboRos" pkg="RlEnvironmentGazeboRos" type="RlEnvironmentGazeboRos" output="screen">
+			<param name="droneId" 					value="$(arg drone_id_int)" 		type="int"/>
+			<param name="stackPath" 				value="$(arg my_stack_directory)" 	type="string"/>
+			<param name="environment_name" 				value="$(arg environment_name)" 	type="string"/>
+
+			<!-- Subscriber -->
+			<param name="model_states" 		type="string" 		value="/gazebo/model_states" />
+			<param name="bumper_states" 		type="string" 		value="/bumper_states" />
+			<param name="uav_pose" 			type="string" 		value="EstimatedPose_droneGMR_wrt_GFF" />
+			<param name="status" 			type="string" 		value="status" />
+			<param name="camera" 			type="string" 		value="camera/front/image_raw" />
+			<param name="bebop_attitude" 		type="string" 		value="rotation_angles" />
+			<param name="bebop_gt" 			type="string" 		value="/vrpn_client_node/bebop/pose" />
+			<param name="platform_gt" 		type="string" 		value="/vrpn_client_node/platform/pose" />
+
+			<!-- Publisher -->
+			<param name="roll_pitch" 		type="string" 		value="command/pitch_roll" />
+			<param name="dYaw" 			type="string" 		value="command/dYaw" />
+			<param name="dAltitude" 		type="string" 		value="command/dAltitude" />
+			<param name="position_refs" 		type="string" 		value="dronePositionRefs" />
+			<param name="control_mode" 		type="string" 		value="command/high_level" />
+			<param name="camera_control" 		type="string" 		value="camera_control" />
+			<param name="aruco_camera" 		type="string" 		value="aruco_camera" />
+
+			<!-- Services -->
+			<param name="set_model_state" 		type="string" 		value="/gazebo/set_model_state" />
+			<param name="reset_estimator" 		type="string" 		value="droneOdometryStateEstimator/reset" />
+
+			<!-- PBVS -->
+			<param name="lambda" value="1.7" type="double"/>
+                        <param name="kpx" value="1.5" type="double"/>
+                        <param name="kpy" value="1.6" type="double"/>
+                        <param name="kpz" value="0.7" type="double"/>
+                        <param name="kpwx" value="0.0" type="double"/>
+                        <param name="kpwy" value="0.0" type="double"/>
+                        <param name="kpwz" value="1.0" type="double"/>
+
+			<param name="uav_speed" 			type="string" 		value="EstimatedSpeed_droneGMR_wrt_GFF" />
+		</node>
+	</group>
+
+</launch>

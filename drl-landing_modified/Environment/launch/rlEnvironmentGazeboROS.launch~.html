@@ -1,0 +1,18 @@
+<!-- Launches: droneAperiodicLandingROSModule -->
+<launch>
+	
+	<arg name="drone_id_namespace"  default="drone7" />
+	<arg name="drone_id_int" 	  		default="7" />
+	<arg name="my_stack_directory" 	default="$(env AEROSTACK_STACK)" />
+	<arg name="environment_name"		default="RlEnvironmentSwarmObstacle" /> <!-- options: RlEnvironmentImageBasedVisualServoing, RlEnvironmentLandingConstant -->
+<!-- options: RlEnvironmentPositionBasedVisualServoing -->
+
+	<group ns="$(arg drone_id_namespace)">
+		<node name="RlEnvironmentGazeboRos" pkg="RlEnvironmentGazeboRos" type="RlEnvironmentGazeboRos" output="screen">
+			<param name="droneId" 					value="$(arg drone_id_int)" type="int"/>
+			<param name="stackPath" 				value="$(arg my_stack_directory)" type="string"/>
+			<param name="environment_name" 	value="$(arg environment_name)" type="string"/>
+		</node>
+	</group>
+
+</launch>
