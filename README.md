@@ -9,9 +9,9 @@ This is the repository for making autonomous landing on moving platform based on
 - **install Parrot Sphinx software** [Parrot Sphinx install]
 - **install teleop_twist_keyboard** - for test purpose, I write keboard control for lider and follower drone, which include also camera control. You don't have to install it, if you don't wanna use it. 
 
-'''
+```console
 $ sudo apt-get install ros-kinetic-teleop-twist-keyboard
-'''
+```
 
 - **install OpenCV and ArUco** using *.sh files from [opencv_aruco_install]
 Now you have to make your own catkin workspace [create workspace] and install:
@@ -19,8 +19,9 @@ Now you have to make your own catkin workspace [create workspace] and install:
 - **dronemsgsros** [dronemsgsros repository]
 - **nav_msgs** [nav_msgs install]
 - **control_toolbox and control_msgs**:
-
-'$ sudo apt-get install ros-kinetic-control-toolbox ros-kinetic-control-msgs'
+```console
+$ sudo apt-get install ros-kinetic-control-toolbox ros-kinetic-control-msgs
+```
 
 - **gym** [gym install]
 - **drl-landing** [drl-landing install] - install original drl-landing repository, then you will make some modifications with it.
@@ -36,11 +37,10 @@ This repository includes:
 - **bebop_keyboard** -also paste to ../your_workspace/src. It includes keboard control to both drones and their camera
 - **collision_avoid** - paste to ../your_workspace/src.
 Now you can compile all workspace:
-
-'''sh
+```console
 $ cd ../your_workspace
 $ catkin build
-'''
+```
 
 to be continued
 
