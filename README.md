@@ -62,15 +62,12 @@ $ catkin build
 ## How to run it?
 First run Parrot Sphinx software with one drone and in example world. I choose empty world with platform:
 ```console
-Run firmware:
+%Run firmware:
 $ sudo firmwared
-Open new terminal or CTRL+SHIFT+T and go to the folder with saved plugin from [Plugins]:
+%Open new terminal or CTRL+SHIFT+T and go to the folder with saved plugin from [Plugins]:
 $ cd ../autolanding_low_speed_plugin
-Run Sphinx software with empty world:
-$ GAZEBO_PLUGIN_PATH=`pwd`/build:$GAZEBO_PLUGIN_PATH sphinx -
--log-level=dbg /opt/parrot-
-sphinx/usr/share/sphinx/worlds/empty_with_platform.world /opt/parrot-
-sphinx/usr/share/sphinx/drones/bebop_leader.drone::with_front_cam=true
+%Run Sphinx software with empty world:
+$ GAZEBO_PLUGIN_PATH=`pwd`/build:$GAZEBO_PLUGIN_PATH sphinx --log-level=dbg /opt/parrot-sphinx/usr/share/sphinx/worlds/empty_with_platform.world /opt/parrot-sphinx/usr/share/sphinx/drones/bebop_leader.drone::with_front_cam=true
 ```
 
 Wait until drone appeared and run bebop_autonomy driver:
