@@ -45,9 +45,10 @@ $ sudo apt-get install ros-kinetic-control-toolbox ros-kinetic-control-msgs
 ## What this repository includes and what modifies you have to make to run the project:
 This repository includes:
 - **bebop_autonomy_modification** - is the folder, which includes modifications with bebop_autonomy driver. I added two launch files: for leader and follower. You have to paste them to *../your_workspace/src/bebop_autonomy/bebop_driver/launch*.
-- **drone_files** -this folder includes leader and follower *.drone files, which Parrot Sphinx use to launch the drone in simulation. You have to paste them to */opt/parrot-sphinx/usr/share/sphinx/drones*. If you would like to launch two drones in one simulation, you have to download elder version of firmware. You can get it from [Firmware version]. Download **Bebop 2 - 4.4.2** and in both files change the firmware path to your own. If you are going to run only one drone, copy firmware path from bebop2.drone file.
+- **drone_files** - this folder includes leader and follower *.drone files, which Parrot Sphinx use to launch the drone in simulation. You have to paste them to */opt/parrot-sphinx/usr/share/sphinx/drones*. If you would like to launch two drones in one simulation, you have to download elder version of firmware. You can get it from [Firmware version]. Download **Bebop 2 - 4.4.2** and in both files change the firmware path to your own. If you are going to run only one drone, copy firmware path from bebop2.drone file.
 - **Plugins** includes plugins to move platform in many ways. Paste them anywhere.
 - **Gazebo_3Dmodels** includes 3D models of platform and room from AeroLab on Poznan University of Technology. Paste them to *~/.gazebo/models*.
+- **Worlds** - includes two Gazebo worlds: one empty world with platform and second room_world also with platform. You can paste them to */opt/parrot-sphinx/usr/share/sphinx/worlds*.
 - **drl-landing_modified** includes modified version of [drl-landing]. You have to paste content of Environment folder to *../your_workspace/src/drl-landing/code-rl-environment-gazebo/rl_envs* and overwrite existing files. Then 
 - **bebop_dronemsgsros** - paste this folder to *../your_workspace/src*
 - **bebop_keyboard** -also paste to *../your_workspace/src*. It includes keboard control to both drones and their camera
@@ -59,6 +60,27 @@ $ catkin build
 ```
 
 ## How to run it?
+First run Parrot Sphinx software with one drone and in example world. I choose empty world with platform:
+```console
+Run firmware:
+$ sudo firmwared
+Open new terminal or CTRL+SHIFT+T and go to the folder with saved plugin from [Plugins]:
+$ cd ../autolanding_low_speed_plugin
+Run Sphinx software with empty world:
+$ GAZEBO_PLUGIN_PATH=`pwd`/build:$GAZEBO_PLUGIN_PATH sphinx -
+-log-level=dbg /opt/parrot-
+sphinx/usr/share/sphinx/worlds/empty_with_platform.world /opt/parrot-
+sphinx/usr/share/sphinx/drones/bebop_leader.drone::with_front_cam=true
+```
+
+Wait until drone appeared and run bebop_autonomy driver:
+
+```console
+$ cd ~/.../your_workspace
+$ source devel/setup.bash
+$ roslaunch bebop_driver bebop_leader_node.launch
+```
+
 to be continued
 
 
@@ -66,6 +88,7 @@ to be continued
 [ROS Kinetic Installation]:<http://wiki.ros.org/kinetic/Installation>
 [Parrot Sphinx install]:<https://developer.parrot.com/docs/sphinx/installation.html>
 [opencv_aruco_install]:<https://github.com/m-milena/bebop2_drl_landing/tree/master/opencv_aruco_install>
+[Plugins]:<https://github.com/m-milena/bebop2_drl_landing/tree/master/Plugins>
 [create workspace]:<http://wiki.ros.org/catkin/Tutorials/create_a_workspace>
 [bebop_autonomy install]:<https://bebop-autonomy.readthedocs.io/en/latest/installation.html>
 [dronemsgsros install]:<https://github.com/Ahrovan/dronemsgsros>
