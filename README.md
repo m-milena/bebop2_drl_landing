@@ -62,11 +62,11 @@ $ catkin build
 ## How to run it?
 First run Parrot Sphinx software with one drone and in example world. I choose empty world with platform:
 ```console
-%Run firmware:
+Run firmware:
 $ sudo firmwared
-%Open new terminal or CTRL+SHIFT+T and go to the folder with saved plugin from [Plugins]:
+Open new terminal or CTRL+SHIFT+T and go to the folder with saved plugin from [Plugins]:
 $ cd ../autolanding_low_speed_plugin
-%Run Sphinx software with empty world:
+Run Sphinx software with empty world:
 $ GAZEBO_PLUGIN_PATH=`pwd`/build:$GAZEBO_PLUGIN_PATH sphinx --log-level=dbg /opt/parrot-sphinx/usr/share/sphinx/worlds/empty_with_platform.world /opt/parrot-sphinx/usr/share/sphinx/drones/bebop_leader.drone::with_front_cam=true
 ```
 
@@ -76,6 +76,21 @@ Wait until drone appeared and run bebop_autonomy driver:
 $ cd ~/.../your_workspace
 $ source devel/setup.bash
 $ roslaunch bebop_driver bebop_leader_node.launch
+```
+Then:
+
+```console
+CTRL+SHIFT+T
+$ rosrun bebop_dronemsgsros bebop_dronemsgsros
+CTRL+SHIFT+T
+$ roslaunch RlEnvironmentGazeboRos rlEnvironmentGazeboROSLandingWithRPdYdAPE_marker_real.launch
+CTRL+SHIFT+T
+$ roslaunch rl_agent ddpg_agent.launch
+```
+If you are going to run keyboard control:
+```console
+$ cd ../your_workspace
+$ rosrun bebop_keyboard bebop_leader_keyboard.launch
 ```
 
 to be continued
