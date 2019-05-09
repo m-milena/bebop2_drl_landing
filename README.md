@@ -93,7 +93,6 @@ $ cd ../your_workspace
 $ rosrun bebop_keyboard bebop_leader_keyboard.launch
 ```
 
-to be continued
 
 
 [drl-landing]:<https://github.com/alejodosr/drl-landing>
